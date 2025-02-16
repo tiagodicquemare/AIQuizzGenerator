@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:2:1-23:12
+ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:2:1-23:12
 MERGED from [io.insert-koin:koin-androidx-compose:4.1.0-Beta5] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/066f3f04742b099a9b520d8bb2924c24/transformed/koin-androidx-compose-4.1.0-Beta5/AndroidManifest.xml:2:1-7:12
 MERGED from [io.insert-koin:koin-compose-android:4.1.0-Beta5] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/fedd1f8e9bc7d0c34a946daf31cae126/transformed/koin-compose-release/AndroidManifest.xml:2:1-7:12
 MERGED from [io.insert-koin:koin-android:4.1.0-Beta5] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/5c301221a667a60cd60074448961eeca/transformed/koin-android-4.1.0-Beta5/AndroidManifest.xml:2:1-9:12
@@ -75,16 +75,16 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tiagodicquemare/.gra
 MERGED from [androidx.tracing:tracing:1.0.0] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/3eb69a8cd7d97e494771a63175876e62/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/399130e026e7b73d244a6ddfc83f2699/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 	package
-		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:2:11-69
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:4:5-21:19
-INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:4:5-21:19
+ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:4:5-21:19
+INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:4:5-21:19
 MERGED from [io.insert-koin:koin-android:4.1.0-Beta5] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/5c301221a667a60cd60074448961eeca/transformed/koin-android-4.1.0-Beta5/AndroidManifest.xml:7:5-20
 MERGED from [io.insert-koin:koin-android:4.1.0-Beta5] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/5c301221a667a60cd60074448961eeca/transformed/koin-android-4.1.0-Beta5/AndroidManifest.xml:7:5-20
 MERGED from [org.jetbrains.compose.components:components-resources-android:1.7.0] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/0071b02a175f627b63e01351143cc2f1/transformed/library-release/AndroidManifest.xml:7:5-14:19
@@ -104,43 +104,43 @@ MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiagodicqu
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/9c4307fe5e2c636633501d01648458c4/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/9c4307fe5e2c636633501d01648458c4/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 	android:extractNativeLibs
-		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/057d087f0f268651efb86f5c2f9771dd/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:9:9-35
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:9:9-35
 	android:label
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:7:9-41
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:7:9-41
 	android:roundIcon
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:8:9-54
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:8:9-54
 	android:icon
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:6:9-43
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:6:9-43
 	android:allowBackup
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:5:9-35
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:5:9-35
 	android:theme
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:10:9-72
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:10:9-72
 activity#com.dicquemare.aiquizzgenerator.MainActivity
-ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:11:9-20:20
+ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:11:9-20:20
 	android:exported
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:12:13-36
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:12:13-36
 	android:configChanges
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:13:13-225
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:13:13-225
 	android:name
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:14:13-41
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:14:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:15:13-19:29
+ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:16:17-69
+ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:16:25-66
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:18:17-77
+ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:18:27-74
+		ADDED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml:18:27-74
 uses-sdk
-INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
-INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
+INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
+INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
 MERGED from [io.insert-koin:koin-androidx-compose:4.1.0-Beta5] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/066f3f04742b099a9b520d8bb2924c24/transformed/koin-androidx-compose-4.1.0-Beta5/AndroidManifest.xml:5:5-44
 MERGED from [io.insert-koin:koin-androidx-compose:4.1.0-Beta5] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/066f3f04742b099a9b520d8bb2924c24/transformed/koin-androidx-compose-4.1.0-Beta5/AndroidManifest.xml:5:5-44
 MERGED from [io.insert-koin:koin-compose-android:4.1.0-Beta5] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/fedd1f8e9bc7d0c34a946daf31cae126/transformed/koin-compose-release/AndroidManifest.xml:5:5-44
@@ -282,9 +282,9 @@ MERGED from [androidx.tracing:tracing:1.0.0] /Users/tiagodicquemare/.gradle/cach
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/399130e026e7b73d244a6ddfc83f2699/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/399130e026e7b73d244a6ddfc83f2699/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
-		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AI-quizz-generator/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/tiagodicquemare/Documents/Projet perso/AIQuizzGenerator/composeApp/src/androidMain/AndroidManifest.xml
 provider#org.jetbrains.compose.resources.AndroidContextProvider
 ADDED from [org.jetbrains.compose.components:components-resources-android:1.7.0] /Users/tiagodicquemare/.gradle/caches/8.9/transforms/0071b02a175f627b63e01351143cc2f1/transformed/library-release/AndroidManifest.xml:8:9-13:20
 	android:enabled

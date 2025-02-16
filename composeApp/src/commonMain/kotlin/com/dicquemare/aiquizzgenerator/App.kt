@@ -27,6 +27,7 @@ fun App(
         darkTheme = darkTheme,
         dynamicColor = dynamicColor,
     ) {
+        val navController: NavHostController = rememberNavController()
         var visible by remember { mutableStateOf(true) }
         Column(
             modifier = Modifier.fillMaxWidth(),
