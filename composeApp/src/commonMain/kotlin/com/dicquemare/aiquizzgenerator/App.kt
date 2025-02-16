@@ -15,7 +15,15 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import aiquizzgenerator.composeapp.generated.resources.Res
 import aiquizzgenerator.composeapp.generated.resources.compose_multiplatform
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.dicquemare.aiquizzgenerator.core.ui.theme.AIQuizzGeneratorTheme
+import com.dicquemare.aiquizzgenerator.feature.create_deck.presentation.ChooseDeckOptionsView
+import com.dicquemare.aiquizzgenerator.feature.create_deck.presentation.ChooseDeckSubjectView
+import com.dicquemare.aiquizzgenerator.feature.home.presentation.HomeView
+import com.dicquemare.aiquizzgenerator.feature.splashscreen.presentation.SplashScreenView
 
 @Composable
 @Preview
@@ -28,19 +36,21 @@ fun App(
         dynamicColor = dynamicColor,
     ) {
         val navController: NavHostController = rememberNavController()
-        var visible by remember { mutableStateOf(true) }
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally
+        NavHost(
+            navController,
+            startDestination = NavigationRoutes.chooseDeckSubjectView
         ) {
-            AnimatedVisibility(visible = visible) {
-                Image(
-                    painter = painterResource(Res.drawable.compose_multiplatform),
-                    contentDescription = "Logo"
-                )
+            composable(NavigationRoutes.splashScreenView) {
+                SplashScreenView(navController = navController)
             }
-            Button(onClick = { visible = !visible }) {
-                Text("Toggle visibility")
+            composable(NavigationRoutes.homeView) {
+                HomeView(navController = navController)
+            }
+            composable(NavigationRoutes.chooseDeckSubjectView) {
+                ChooseDeckSubjectView(navController = navController)
+            }
+            composable(NavigationRoutes.chooseDeckOptionsView) {
+                ChooseDeckOptionsView(navController = navController)
             }
         }
     }
