@@ -22,24 +22,29 @@ fun PreviewLargeTextFieldWithButton() {
 }
 
 @Composable
-fun LargeTextFieldWithButton(hint: String = "", onSendButtonClicked: (String) -> Unit) {
+fun LargeTextFieldWithButton(
+    text: String = "",
+    hint: String = "",
+    onChanged: (String) -> Unit = {},
+    onSendButtonClicked: (String) -> Unit = {}
+) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        val textState = remember { mutableStateOf("") }
-
         LargeTextField(
-            textState = textState,
+            text = text,
             hint = hint,
-        )
+        ) {
+            onChanged(it)
+        }
         Row {
             Spacer(modifier = Modifier.weight(1f))
             Button(
                 onClick = {
-                    onSendButtonClicked(textState.value)
+                    onSendButtonClicked(text)
                 },
                 modifier = Modifier
                     .padding(16.dp)

@@ -1,0 +1,14 @@
+CREATE TABLE MultipleChoiceCardEntity (
+    id TEXT PRIMARY KEY REFERENCES QuizCardEntity(id) ON DELETE CASCADE,
+    question TEXT NOT NULL,
+    choices TEXT NOT NULL,
+    correctAnswerIndex INTEGER NOT NULL,
+    difficulty TEXT NOT NULL,
+    theme TEXT NOT NULL,
+    trivia TEXT
+);
+
+insertCard:
+INSERT INTO MultipleChoiceCardEntity (id, question, choices, correctAnswerIndex, difficulty, theme, trivia)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+

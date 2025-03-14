@@ -9,7 +9,8 @@ enum class CardDifficulty {
 enum class CardTheme {
     FUNNY,
     INTERESTING,
-    SERIOUS
+    UNUSUAL,
+    INSTRUCTIVE,
 }
 
 data class QuizCardOptions (

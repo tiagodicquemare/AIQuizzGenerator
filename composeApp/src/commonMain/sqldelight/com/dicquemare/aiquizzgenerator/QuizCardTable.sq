@@ -1,0 +1,18 @@
+CREATE TABLE QuizCardEntity (
+    id TEXT PRIMARY KEY,
+    deckId TEXT NOT NULL REFERENCES DeckEntity(id) ON DELETE CASCADE,
+    type TEXT NOT NULL,
+    difficulty TEXT NOT NULL,
+    theme TEXT NOT NULL,
+    FOREIGN KEY (deckId) REFERENCES DeckEntity(id)
+);
+
+insertCard:
+INSERT INTO QuizCardEntity (id, deckId, type, difficulty, theme)
+VALUES (?, ?, ?,?, ?);
+
+selectAllCardsByDeckId:
+SELECT * FROM QuizCardEntity WHERE deckId = ?;
+
+deleteCardById:
+DELETE FROM QuizCardEntity WHERE id = ?;

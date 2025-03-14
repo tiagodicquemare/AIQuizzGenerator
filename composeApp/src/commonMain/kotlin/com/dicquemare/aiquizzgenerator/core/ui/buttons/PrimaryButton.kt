@@ -41,7 +41,7 @@ fun PrimaryButton(
             enabled = enabled,
             colors = ButtonDefaults.buttonColors(color),
             modifier = Modifier
-                .heightIn(min = 54.dp)
+                .heightIn(min = 54.dp).fillMaxWidth()
         ) {
             Text(
                 text = text,

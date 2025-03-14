@@ -1,16 +1,23 @@
 package com.dicquemare.aiquizzgenerator
 
 import android.app.Application
-import com.dicquemare.aiquizzgenerator.feature.create_deck.di.createDeckModule
-import org.koin.android.ext.koin.androidContext
-import org.koin.core.context.startKoin
+import android.content.Context
+import com.dicquemare.aiquizzgenerator.core.initKoin
+import com.dicquemare.aiquizzgenerator.core.utils.AndroidLogger
+import com.dicquemare.aiquizzgenerator.core.utils.KMMLogger
+import org.koin.dsl.module
 
-class MainApplication: Application() {
+class MainApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        startKoin {
-            androidContext(this@MainApplication)
-            modules(createDeckModule)
-        }
+        initKoin(listOf(
+            module {
+                single<Context> { this@MainApplication }
+            }
+        )
+        )
+
+
+        KMMLogger.instance = AndroidLogger()
     }
 }

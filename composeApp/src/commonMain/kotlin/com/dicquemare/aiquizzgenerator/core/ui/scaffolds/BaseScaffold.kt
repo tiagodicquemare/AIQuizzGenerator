@@ -18,7 +18,8 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun BaseScaffold(
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier.padding(horizontal = 24.dp),
+    columnHorizontalAlignment: Alignment.Horizontal = Alignment.Start,
     content: @Composable ColumnScope.() -> Unit
 ) {
     val insets = WindowInsets.systemBars.asPaddingValues()
@@ -26,12 +27,11 @@ fun BaseScaffold(
         backgroundColor = MaterialTheme.colorScheme.background
     ) { innerPadding ->
         Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            horizontalAlignment = columnHorizontalAlignment,
             modifier = modifier.fillMaxWidth().imePadding()
                 .padding(insets)
-                .padding(horizontal = 24.dp)
-                .padding(innerPadding),
+                .padding(innerPadding)
+                .imePadding(),
             content = content
         )
     }

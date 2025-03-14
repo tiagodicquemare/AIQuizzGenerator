@@ -1,0 +1,43 @@
+CREATE TABLE IF NOT EXISTS DeckEntity (
+    id TEXT PRIMARY KEY,
+    title TEXT NOT NULL
+);
+
+insertDeck:
+INSERT INTO DeckEntity (id, title)
+VALUES (?, ?);
+
+deleteDeck:
+DELETE FROM DeckEntity
+WHERE id = ?;
+
+selectAllDecks:
+SELECT DeckEntity.id AS deckId,
+              DeckEntity.title AS deckTitle,
+              QuizCardEntity.id AS quizCardId,
+              QuizCardEntity.type AS quizCardType,
+              QuizCardEntity.difficulty AS quizCardDifficulty,
+              QuizCardEntity.theme AS quizCardTheme,
+              MultipleChoiceCardEntity.question AS multipleChoiceQuestion,
+              MultipleChoiceCardEntity.choices AS multipleChoiceChoices,
+              MultipleChoiceCardEntity.correctAnswerIndex AS multipleChoiceCorrectAnswerIndex,
+              MultipleChoiceCardEntity.trivia AS multipleChoiceTrivia
+              FROM DeckEntity
+                         LEFT JOIN QuizCardEntity ON DeckEntity.id = QuizCardEntity.deckId
+                         LEFT JOIN MultipleChoiceCardEntity ON QuizCardEntity.id = MultipleChoiceCardEntity.id;
+
+selectDeckById:
+SELECT DeckEntity.id AS deckId,
+           DeckEntity.title AS deckTitle,
+           QuizCardEntity.id AS quizCardId,
+           QuizCardEntity.type AS quizCardType,
+           QuizCardEntity.difficulty AS quizCardDifficulty,
+           QuizCardEntity.theme AS quizCardTheme,
+           MultipleChoiceCardEntity.question AS multipleChoiceQuestion,
+           MultipleChoiceCardEntity.choices AS multipleChoiceChoices,
+           MultipleChoiceCardEntity.correctAnswerIndex AS multipleChoiceCorrectAnswerIndex,
+           MultipleChoiceCardEntity.trivia AS multipleChoiceTrivia
+           FROM DeckEntity
+                      LEFT JOIN QuizCardEntity ON DeckEntity.id = QuizCardEntity.deckId
+                      LEFT JOIN MultipleChoiceCardEntity ON QuizCardEntity.id = MultipleChoiceCardEntity.id
+                      WHERE DeckEntity.id = ?;

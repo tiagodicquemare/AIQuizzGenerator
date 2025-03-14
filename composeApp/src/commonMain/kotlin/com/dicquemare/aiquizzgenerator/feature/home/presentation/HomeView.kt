@@ -30,9 +30,9 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 fun HomeView(navController: NavController? = null) {
     val lazyListState = rememberLazyListState()
     val mockDeck = listOf<Deck>(
-        Deck(title = "Deck 1", cards = emptyList()),
-        Deck(title = "Deck 2", cards = emptyList()),
-        Deck(title = "Deck 3", cards = emptyList()),
+        Deck(id = "1", title = "Deck 1", cards = emptyList()),
+        Deck(id = "2", title = "Deck 2", cards = emptyList()),
+        Deck(id = "3", title = "Deck 3", cards = emptyList()),
     )
     Scaffold(
         backgroundColor = MaterialTheme.colorScheme.background
@@ -67,7 +67,7 @@ fun HomeView(navController: NavController? = null) {
                 item {
                     Spacer(modifier = Modifier.height(16.dp))
                     PrimaryButton(text = "Créer un deck") {
-                        navController?.navigate(NavigationRoutes.chooseDeckSubjectView)
+                        navController?.navigate(NavigationRoutes.ChooseDeckSubjectViewRoute)
                     }
                 }
             }

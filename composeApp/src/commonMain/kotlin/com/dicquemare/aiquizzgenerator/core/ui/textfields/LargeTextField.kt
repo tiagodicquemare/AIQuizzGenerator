@@ -25,14 +25,16 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview
 @Composable
 fun PreviewLargeTextField() {
-    LargeTextField(textState = remember { mutableStateOf("") }, hint = "Votre sujet")
+    LargeTextField(text = "Test", hint = "Votre sujet") {
+        // do nothing
+    }
 }
 
 @Composable
-fun LargeTextField(textState: MutableState<String>, hint: String = "") {
+fun LargeTextField(text: String, hint: String = "", onChanged : (String) -> Unit = {}) {
     TextField(
-        value = textState.value,
-        onValueChange = { textState.value = it },
+        value = text,
+        onValueChange = { onChanged(it) },
         modifier = Modifier
             .fillMaxWidth()
             .height(120.dp),

@@ -52,7 +52,7 @@ fun SplashScreenView(navController: NavController? = null) {
             PrimaryButton(
                 text = "Commencer",
                 onClick = {
-                    navController?.navigate(NavigationRoutes.homeView)
+                    navController?.navigate(NavigationRoutes.HomeViewRoute)
                 },
             )
             Spacer(modifier = Modifier.height(24.dp))

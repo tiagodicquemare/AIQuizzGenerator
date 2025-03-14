@@ -1,0 +1,28 @@
+CREATE TABLE DeckCreationOptionsEntity (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    subject TEXT,
+    type TEXT ,
+    difficulty TEXT,
+    theme TEXT,
+    card_count INTEGER,
+    with_trivia INTEGER CHECK (with_trivia IN (0,1))
+);
+
+selectCurrentDeckCreationOptions:
+SELECT * FROM DeckCreationOptionsEntity LIMIT 1;
+
+insertDeck:
+INSERT INTO DeckCreationOptionsEntity (subject, type, difficulty, theme, card_count, with_trivia)
+VALUES (?, ?, ?, ?, ?, ?);
+
+updateDeck:
+UPDATE DeckCreationOptionsEntity
+SET subject = ?,
+    type = ?,
+    difficulty = ?,
+    theme = ?,
+    card_count = ?,
+    with_trivia = ?;
+
+
+
