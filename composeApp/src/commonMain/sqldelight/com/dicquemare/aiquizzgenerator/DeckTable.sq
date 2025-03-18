@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS DeckEntity (
+CREATE TABLE DeckEntity (
     id TEXT PRIMARY KEY,
     title TEXT NOT NULL
 );

@@ -1,4 +1,4 @@
-package com.dicquemare.aiquizzgenerator.feature.create_deck.presentation.viewmodels
+package com.dicquemare.aiquizzgenerator.feature.home.presentation.viewmodels
 
 import androidx.lifecycle.viewModelScope
 import com.dicquemare.aiquizzgenerator.core.presentation.BaseViewModel
@@ -10,15 +10,14 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.launch
 
-data class VisualiseDeckViewModelState(
+data class DeckDetailsViewModelState(
     val deck: Deck? = null
 )
 
-class VisualiseDeckViewModel(
+class DeckDetailsViewModel(
     private val getDeckById: GetDeckById,
     private val deleteDeckById: DeleteDeckById
-) : BaseViewModel<VisualiseDeckViewModelState>(VisualiseDeckViewModelState()) {
-
+) : BaseViewModel<DeckDetailsViewModelState>(DeckDetailsViewModelState()) {
     sealed class VisualiseDeckEvent : UIEvent() {
         data object DeckDeleted : VisualiseDeckEvent()
     }

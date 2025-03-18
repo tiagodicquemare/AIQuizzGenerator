@@ -45,7 +45,7 @@ fun PrimaryButton(
         ) {
             Text(
                 text = text,
-                style = MaterialTheme.typography.displayMedium.copy(fontSize = 24.sp),
+                style = MaterialTheme.typography.titleLarge.copy(fontSize = 20.sp),
                 color = MaterialTheme.colorScheme.onPrimary,
                 textAlign = TextAlign.Center
             )

@@ -9,5 +9,6 @@ val databaseModule = module {
 }
 
 fun getDatabaseInstance(driverFactory: SqlDriver): AppDatabase {
+
     return AppDatabase(driverFactory)
 }

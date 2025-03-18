@@ -12,7 +12,9 @@ import com.dicquemare.aiquizzgenerator.feature.create_deck.presentation.ChooseDe
 import com.dicquemare.aiquizzgenerator.feature.create_deck.presentation.ChooseDeckSubjectView
 import com.dicquemare.aiquizzgenerator.feature.create_deck.presentation.DeckCreationLoadingView
 import com.dicquemare.aiquizzgenerator.feature.create_deck.presentation.VisualiseCreatedDeckView
+import com.dicquemare.aiquizzgenerator.feature.home.presentation.DeckDetailsView
 import com.dicquemare.aiquizzgenerator.feature.home.presentation.HomeView
+import com.dicquemare.aiquizzgenerator.feature.play_deck.presentation.SimplePlayDeckView
 import com.dicquemare.aiquizzgenerator.feature.splashscreen.presentation.SplashScreenView
 
 @Composable
@@ -28,7 +30,7 @@ fun App(
         val navController: NavHostController = rememberNavController()
         NavHost(
             navController,
-            startDestination = NavigationRoutes.DeckCreationLoadingViewRoute
+            startDestination = NavigationRoutes.SplashScreenViewRoute
         ) {
             composable<NavigationRoutes.SplashScreenViewRoute> {
                 SplashScreenView(navController = navController)
@@ -48,6 +50,14 @@ fun App(
             composable<NavigationRoutes.VisualiseDeckCreationViewRoute> {
                 val args = it.toRoute<NavigationRoutes.VisualiseDeckCreationViewRoute>()
                 VisualiseCreatedDeckView(navController = navController, deckId = args.deckId)
+            }
+            composable<NavigationRoutes.DeckDetailsViewRoute> {
+                val args = it.toRoute<NavigationRoutes.DeckDetailsViewRoute>()
+                DeckDetailsView(navController = navController, deckId = args.deckId)
+            }
+            composable<NavigationRoutes.SimplePlayDeckViewRoute> {
+                val args = it.toRoute<NavigationRoutes.SimplePlayDeckViewRoute>()
+                SimplePlayDeckView(navController = navController, deckId = args.deckId)
             }
         }
     }

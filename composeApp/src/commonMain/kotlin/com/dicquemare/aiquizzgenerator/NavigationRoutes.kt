@@ -16,4 +16,8 @@ sealed class NavigationRoutes() {
     data object DeckCreationLoadingViewRoute : NavigationRoutes()
     @Serializable
     data class VisualiseDeckCreationViewRoute(val deckId: String) : NavigationRoutes()
+    @Serializable
+    data class DeckDetailsViewRoute(val deckId: String) : NavigationRoutes()
+    @Serializable
+    data class SimplePlayDeckViewRoute(val deckId: String) : NavigationRoutes()
 }

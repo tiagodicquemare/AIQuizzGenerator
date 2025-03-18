@@ -50,7 +50,7 @@ class CreateDeckRepositoryImpl(private val database: AppDatabase) : CreateDeckRe
     }
 
     override suspend fun createDeckWithLLM(): Deck {
-        delay(3000) // Simulate network delay
+        delay(1500) // Simulate network delay
         return Deck(
             id = randomString(8),
             title = "Deck title",
