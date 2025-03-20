@@ -27,7 +27,6 @@ class CreateDeckSharedViewModel(
 ) : BaseViewModel<CreateDeckSharedViewModelState>(CreateDeckSharedViewModelState()) {
 
     sealed class CreateDeckSharedUIEvent : UIEvent() {
-        object NavigateToChooseDeckOptions : UIEvent()
         data class NavigateToVisualiseDeckCreation(val deckId: String) : UIEvent()
     }
 
@@ -47,7 +46,6 @@ class CreateDeckSharedViewModel(
     fun updateSubject(newSubject: String) {
         viewModelScope.launch(Dispatchers.IO) {
             updateCreationDeckOptions(SaveCreationDeckOptionsParams(subject = newSubject))
-            _uiEvent.emit(CreateDeckSharedUIEvent.NavigateToChooseDeckOptions)
         }
     }
 

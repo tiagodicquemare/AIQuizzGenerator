@@ -26,15 +26,6 @@ fun ChooseDeckSubjectView(
     sharedViewModel: CreateDeckSharedViewModel = koinInject()
 ) {
     val uiState by sharedViewModel.uiState.collectAsStateWithLifecycle()
-    LaunchedEffect(Unit) {
-        sharedViewModel.uiEvent.collect() { event ->
-            when (event) {
-                is CreateDeckSharedViewModel.CreateDeckSharedUIEvent.NavigateToChooseDeckOptions -> {
-                    navController?.navigate(NavigationRoutes.ChooseDeckOptionsViewRoute)
-                }
-            }
-        }
-    }
 
     BaseScaffold(content = {
         Spacer(modifier = Modifier.weight(1f))
@@ -50,9 +41,12 @@ fun ChooseDeckSubjectView(
         LargeTextFieldWithButton(
             hint = "Votre sujet",
             text = uiState.creationDeckOptions.subject ?: "",
+            onChanged = { text ->
+                sharedViewModel.updateSubject(text)
+            },
             onSendButtonClicked = { text ->
                 if (text.isNotBlank()) {
-                    sharedViewModel.updateSubject(text)
+                    navController?.navigate(NavigationRoutes.ChooseDeckOptionsViewRoute)
                 }
             })
         Spacer(modifier = Modifier.weight(1f))
