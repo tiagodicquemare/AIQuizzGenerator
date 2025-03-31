@@ -10,6 +10,7 @@ import org.koin.dsl.module
 class MainApplication : Application() {
     override fun onCreate() {
         super.onCreate()
+        multiplatform.network.cmptoast.AppContext.apply { set(applicationContext) }
         initKoin(listOf(
             module {
                 single<Context> { this@MainApplication }

@@ -69,6 +69,7 @@ kotlin {
             implementation(libs.sqldelight.runtime)
             implementation(libs.navigation.compose)
             implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.cmptoast)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)

@@ -15,7 +15,9 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import com.dicquemare.aiquizzgenerator.NavigationRoutes
 import com.dicquemare.aiquizzgenerator.core.ui.scaffolds.BaseScaffold
+import com.dicquemare.aiquizzgenerator.core.ui.toasts.ToastManager
 import com.dicquemare.aiquizzgenerator.feature.create_deck.presentation.viewmodels.CreateDeckSharedViewModel
+import kotlinx.coroutines.delay
 import org.koin.compose.koinInject
 
 @Composable
@@ -31,14 +33,22 @@ fun DeckCreationLoadingView(
                 is CreateDeckSharedViewModel.CreateDeckSharedUIEvent.NavigateToVisualiseDeckCreation -> {
                     navController?.navigate(NavigationRoutes.VisualiseDeckCreationViewRoute(event.deckId))
                 }
+                is CreateDeckSharedViewModel.CreateDeckSharedUIEvent.ErrorInGeneratingDeck -> {
+                    ToastManager.showDefaultToast("Erreur lors de la génération du deck")
+                    delay(1000)
+                    navController?.popBackStack()
+                }
             }
         }
     }
+
     BaseScaffold {
         Spacer(modifier = Modifier.weight(1f))
-        Text("Requête au serveur...", style = MaterialTheme.typography.headlineMedium.copy(
-            color = MaterialTheme.colorScheme.onBackground
-        ))
+        Text(
+            "Requête au serveur...", style = MaterialTheme.typography.headlineMedium.copy(
+                color = MaterialTheme.colorScheme.onBackground
+            )
+        )
         Spacer(modifier = Modifier.height(16.dp))
         LinearProgressIndicator(
             modifier = Modifier.fillMaxWidth()

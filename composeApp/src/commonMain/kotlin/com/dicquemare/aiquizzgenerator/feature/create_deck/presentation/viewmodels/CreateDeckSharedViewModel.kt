@@ -28,6 +28,7 @@ class CreateDeckSharedViewModel(
 
     sealed class CreateDeckSharedUIEvent : UIEvent() {
         data class NavigateToVisualiseDeckCreation(val deckId: String) : UIEvent()
+        object ErrorInGeneratingDeck : UIEvent()
     }
 
     init {
@@ -73,7 +74,7 @@ class CreateDeckSharedViewModel(
             createDeckWithLLM.invoke(Unit, onSuccess = { deck ->
                 _uiEvent.emit(CreateDeckSharedUIEvent.NavigateToVisualiseDeckCreation(deck.id))
             }, onFailure = {
-
+                _uiEvent.emit(CreateDeckSharedUIEvent.ErrorInGeneratingDeck)
             })
         }
     }
