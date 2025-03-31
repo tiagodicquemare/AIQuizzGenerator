@@ -21,9 +21,9 @@ class SimplePlayDeckViewModel(private val getDeckById: GetDeckById) :
     private val cardsAlreadyDrawed = mutableListOf<QuizCard>()
     fun loadDeckById(deckId: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            getDeckById.execute(deckId)?.let { deck ->
+            getDeckById.invoke(deckId, onSuccess = { deck ->
                 updateState { copy(deck = deck, cardCountLeft = deck.cardsCount()) }
-            }
+            })
         }
     }
 

@@ -1,6 +1,6 @@
 package com.dicquemare.aiquizzgenerator.core
 
-import com.dicquemare.aiquizzgenerator.core.data.local.platformModule
+import com.dicquemare.aiquizzgenerator.core.data.platformModule
 import com.dicquemare.aiquizzgenerator.core.di.databaseModule
 import com.dicquemare.aiquizzgenerator.feature.create_deck.di.createDeckModule
 import com.dicquemare.aiquizzgenerator.feature.home.di.homeModule

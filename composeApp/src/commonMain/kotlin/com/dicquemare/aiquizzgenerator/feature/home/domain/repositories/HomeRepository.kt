@@ -6,5 +6,5 @@ interface HomeRepository {
     suspend fun saveDeck(deck: Deck)
     suspend fun deleteDeckById(deckId: String)
     suspend fun getDecks(): List<Deck>
-    suspend fun getDeckById(deckId: String): Deck?
+    suspend fun getDeckById(deckId: String): Deck
 }

@@ -25,16 +25,17 @@ class DeckDetailsViewModel(
 
     fun loadDeckById(deckId: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            getDeckById.execute(deckId)?.let { deck ->
+            getDeckById.invoke(deckId, onSuccess = { deck ->
                 updateState { copy(deck = deck) }
-            }
+            })
         }
     }
 
     fun deleteDeck() {
         viewModelScope.launch(Dispatchers.IO) {
-            deleteDeckById.execute(uiState.value.deck?.id ?: return@launch)
-            _uiEvent.emit(VisualiseDeckEvent.DeckDeleted)
+            deleteDeckById.invoke(uiState.value.deck?.id ?: return@launch, onSuccess = { deck ->
+                _uiEvent.emit(VisualiseDeckEvent.DeckDeleted)
+            })
         }
     }
 }

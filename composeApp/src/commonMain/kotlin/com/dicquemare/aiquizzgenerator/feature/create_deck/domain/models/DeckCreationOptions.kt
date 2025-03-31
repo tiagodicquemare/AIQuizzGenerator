@@ -6,7 +6,7 @@ import com.dicquemare.aiquizzgenerator.feature.home.domain.models.CardTheme
 enum class CardType {
     MULTIPLE_CHOICE,
     TRUE_FALSE,
-    OPEN_ENDED
+    FILL_BLANK
 }
 
 data class DeckCreationOptions (

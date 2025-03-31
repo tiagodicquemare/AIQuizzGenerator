@@ -1,4 +1,4 @@
-package com.dicquemare.aiquizzgenerator.core.data.local
+package com.dicquemare.aiquizzgenerator.core.data
 
 import org.koin.core.module.Module
 

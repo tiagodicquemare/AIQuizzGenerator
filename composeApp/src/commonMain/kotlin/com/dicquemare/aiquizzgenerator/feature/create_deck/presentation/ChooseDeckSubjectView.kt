@@ -7,6 +7,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -26,6 +28,7 @@ fun ChooseDeckSubjectView(
     sharedViewModel: CreateDeckSharedViewModel = koinInject()
 ) {
     val uiState by sharedViewModel.uiState.collectAsStateWithLifecycle()
+    val textSubject = remember { mutableStateOf<String?>(null) }
 
     BaseScaffold(content = {
         Spacer(modifier = Modifier.weight(1f))
@@ -40,8 +43,9 @@ fun ChooseDeckSubjectView(
         Spacer(modifier = Modifier.height(32.dp))
         LargeTextFieldWithButton(
             hint = "Votre sujet",
-            text = uiState.creationDeckOptions.subject ?: "",
+            text = textSubject.value ?: uiState.creationDeckOptions.subject ?: "",
             onChanged = { text ->
+                textSubject.value = text
                 sharedViewModel.updateSubject(text)
             },
             onSendButtonClicked = { text ->

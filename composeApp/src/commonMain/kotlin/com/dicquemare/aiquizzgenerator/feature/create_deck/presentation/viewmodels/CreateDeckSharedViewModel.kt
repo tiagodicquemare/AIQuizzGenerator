@@ -32,15 +32,16 @@ class CreateDeckSharedViewModel(
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
-            KMMLogger.d("ChooseDeckOptionsView creationDeckOptions.value: ${uiState.value.creationDeckOptions.subject}")
-            updateState { copy(creationDeckOptions = getCurrentCreationDeckOptions.execute(Unit)) }
+            getCurrentCreationDeckOptions.invoke(Unit, onSuccess = {
+                updateState { copy(creationDeckOptions = it) }
+            })
         }
     }
 
     private suspend fun updateCreationDeckOptions(params: SaveCreationDeckOptionsParams) {
-        updateState {
-            copy(creationDeckOptions = saveCreationDeckOptions.execute(params))
-        }
+        saveCreationDeckOptions.invoke(params, onSuccess = {
+            updateState { copy(creationDeckOptions = it) }
+        })
     }
 
     fun updateSubject(newSubject: String) {
@@ -69,8 +70,11 @@ class CreateDeckSharedViewModel(
 
     fun launchDeckCreation() {
         viewModelScope.launch(Dispatchers.IO) {
-            val deck = createDeckWithLLM.execute(Unit)
-            _uiEvent.emit(CreateDeckSharedUIEvent.NavigateToVisualiseDeckCreation(deck.id))
+            createDeckWithLLM.invoke(Unit, onSuccess = { deck ->
+                _uiEvent.emit(CreateDeckSharedUIEvent.NavigateToVisualiseDeckCreation(deck.id))
+            }, onFailure = {
+
+            })
         }
     }
 }

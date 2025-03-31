@@ -11,6 +11,10 @@ import com.dicquemare.aiquizzgenerator.feature.home.domain.models.MultipleChoice
 import com.dicquemare.aiquizzgenerator.feature.home.domain.repositories.HomeRepository
 import kotlinx.serialization.json.Json
 
+sealed class HomeRepositoryError : Throwable() {
+    data class NoDeckFoundWithId(val deckId: String) : HomeRepositoryError()
+}
+
 class HomeRepositoryImpl(private val database: AppDatabase) : HomeRepository {
     override suspend fun saveDeck(deck: Deck) {
         database.deckTableQueries.insertDeck(id = deck.id, title = deck.title)
@@ -79,11 +83,11 @@ class HomeRepositoryImpl(private val database: AppDatabase) : HomeRepository {
             }
     }
 
-    override suspend fun getDeckById(deckId: String): Deck? {
+    override suspend fun getDeckById(deckId: String): Deck {
         val rows = database.deckTableQueries.selectDeckById(deckId).executeAsList()
 
         if (rows.isEmpty()) {
-            return null
+            throw HomeRepositoryError.NoDeckFoundWithId(deckId)
         }
         return Deck(
             id = rows.first().deckId,
