@@ -11,6 +11,7 @@
         android:name=".MainApplication"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
         tools:replace="android:name,android:allowBackup">
         <activity
             android:exported="true"
