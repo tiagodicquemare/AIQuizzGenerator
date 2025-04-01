@@ -72,6 +72,52 @@ class CreateDeckRepositoryImpl(
         throw CreateDeckRepositoryError.NoDeckCreationOptions
     }
 
+    private suspend fun createDeckWithMockup(): Deck {
+        delay(1500) // Simulate network delay
+        return Deck(
+            id = randomString(8),
+            title = "Deck title",
+            cards = listOf(
+                MultipleChoiceCard(
+                    id = randomString(8),
+                    question = "What is the capital of France?",
+                    choices = listOf("Paris", "London", "Berlin", "Madrid"),
+                    correctAnswerIndex = 0
+                ),
+                MultipleChoiceCard(
+                    id = randomString(8),
+                    question = "What is the capital of Germany?",
+                    choices = listOf("Paris", "London", "Berlin", "Madrid"),
+                    correctAnswerIndex = 2
+                ),
+                MultipleChoiceCard(
+                    id = randomString(8),
+                    question = "What is the capital of Spain?",
+                    choices = listOf("Paris", "London", "Berlin", "Madrid"),
+                    correctAnswerIndex = 3
+                ),
+                MultipleChoiceCard(
+                    id = randomString(8),
+                    question = "What is the capital of England?",
+                    choices = listOf("Paris", "London", "Berlin", "Madrid"),
+                    correctAnswerIndex = 1
+                ),
+                MultipleChoiceCard(
+                    id = randomString(8),
+                    question = "What is the capital of Italy?",
+                    choices = listOf("Paris", "London", "Berlin", "Madrid"),
+                    correctAnswerIndex = 0
+                ),
+                MultipleChoiceCard(
+                    id = randomString(8),
+                    question = "What is the capital of Portugal?",
+                    choices = listOf("Paris", "London", "Berlin", "Madrid"),
+                    correctAnswerIndex = 3
+                ),
+            )
+        )
+    }
+
     private fun randomString(length: Int): String {
         val chars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
         return (1..length)

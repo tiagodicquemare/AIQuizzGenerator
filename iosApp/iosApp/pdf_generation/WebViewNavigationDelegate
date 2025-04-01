@@ -1,0 +1,13 @@
+class WebViewNavigationDelegate: NSObject, WKNavigationDelegate {
+    let onFinish: () -> Void
+
+    init(onFinish: @escaping () -> Void) {
+        self.onFinish = onFinish
+    }
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.onFinish()
+        }
+    }
+}
